@@ -5,7 +5,8 @@ class Ability
     user ||= User.new
     return unless user.present?
 
-      can :manage, all
-    end
+    can :manage, Group, user_id: user.id
+    can :manage, Transac, author_id: user.id
+    
   end
 end
