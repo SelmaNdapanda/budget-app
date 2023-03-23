@@ -1,26 +1,38 @@
-<h2>Log in</h2>
+<header>
+  <nav>
+    <%= link_to root_path, class: 'back-btn' do %>
+      <ion-icon name="arrow-back" class="settings-btn"></ion-icon>
+    <% end %>
+  </nav>
+  <h1 class="page-title">Sign in</h1>
+  <%= button_to "Log in", new_user_session_path, method: :get, class: "sign-in primary-text" %>
+</header>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<section class="fields">
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <ion-icon name="mail-outline"></ion-icon>
+    <%= f.email_field :email, placeholder: "Email", autofocus: true, autocomplete: "email" %>
   </div>
 
   <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
+  <ion-icon name="key-outline"></ion-icon>
+    <%= f.password_field :password, placeholder: "Password", autocomplete: "current-password" %>
   </div>
 
   <% if devise_mapping.rememberable? %>
-    <div class="field">
+    <div class="field-remember">
       <%= f.check_box :remember_me %>
       <%= f.label :remember_me %>
     </div>
   <% end %>
+  <div class="devise-links">
+    <%= render "devise/shared/links" %>
+  </div>
+</section>
 
   <div class="actions">
-    <%= f.submit "Log in" %>
+    <%= f.submit "Log in", class: "btton" %>
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
