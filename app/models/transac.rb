@@ -2,7 +2,13 @@ class Transac < ApplicationRecord
   belongs_to :author, class_name: 'User'
   belongs_to :group
 
-  validates :name, presence: true, length: { in: 1..50 } 
-  validates :amount, presence: true, numericality: { greater_than: 0 }
-  validates :password, presence: true, length: { in: 6..50 } 
+  validates :name, :author, :group, :amount, presence: true
+  
+  def date
+    date = ''
+    date += "#{created_at.day} "
+    date += "#{Date::ABBR_MONTHNAMES[created_at.month]} "
+    date += created_at.year.to_s
+    date
+  end
 end
