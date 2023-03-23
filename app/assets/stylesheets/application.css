@@ -1,15 +1,306 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+:root {
+  --main-color: #3778c2;
+  --sec-color: #5fb523;
+  --text-color: #434b54;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+  
+body {
+  min-height: 100vh;
+  padding-bottom: 70px;
+  position: relative;
+  font-family: proxima-nova, sans-serif;
+  color: var(--text-color);
+  background-color: #f7f8fd;
+}
+
+.primary-text {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.secondary-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+  
+.alert,
+.notice {
+  position: absolute;
+  top: 2rem;
+  left: 10%;
+  right: 0;
+  z-index: 10;
+  padding: 1rem;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #ddd;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -ms-transition: opacity 0.2s ease-in-out;
+  animation: alert 1.5s;
+}
+  
+.alert {
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -ms-transition: opacity 0.2s ease-in-out;
+}
+  
+@keyframes alert {
+  from {
+    opacity: 0;
+  }
+  
+  to {
+    opacity: 1;
+  }
+}
+
+.sign-in {
+  right: 0.5rem;
+  display: flex;
+  justify-content: end;
+  font-weight: 400;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.splash-title {
+  text-align: center;
+  padding-top: 30vh;
+  color: var(--text-color);
+  font-size: 2.5rem;
+  font-style: italic;
+}
+
+#splash-screen nav {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+#splash-screen nav .btton {
+  position: initial;
+}
+
+.blue-btton {
+  background-color: var(--main-color) !important;
+}
+
+.grey-btton {
+  background-color: inherit !important;
+  color: var(--text-color) !important; 
+}
+
+.grey-btton a {
+  color: var(--text-color) !important;
+}
+
+.sign-out {
+  right: 0.5rem;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 0.5rem;
+  height: 2rem;
+  font-size: 1rem;
+  color: rgb(241, 55, 55);
+  font-weight: 400;
+  border-color: rgb(241, 55, 55);
+  border-radius: 10px;
+}
+
+.home-btn, .back-btn {
+  position: absolute;
+  right: 43%;
+  left: 1.5rem;
+  display: flex;
+  justify-content: start;
+}
+
+.settings-btn {
+  font-size: 2rem;
+  color: #9598a7;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.fields {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  gap: 0.5rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: row;
+  padding: 0 2rem;
+  background-color: #fff;
+  width: 90%;
+  border-radius: 5px;
+}
+
+input {
+  border: none;
+  width: 100%;
+  outline: none;
+}
+
+.field-remember {
+  display: flex;
+  gap: 1rem;
+}
+  
+/* stylelint-disable */
+.field > ion-icon {
+  font-size: 1.5rem;
+  color: #fff;
+  padding: 0.5rem;
+  margin: 1.5rem 0;
+  margin-right: 1rem;
+  background-color: var(--main-color);
+  border-radius: 30%;
+}
+
+ion-icon:hover {
+  color: #fff;
+  background-color: var(--main-color);
+  border-radius: 30%;
+  transition: 0.5s;
+}
+/* stylelint-enable */
+
+header {
+  display: flex;
+  align-items: center; 
+  justify-content: space-around;
+  background-color: var(--main-color);
+  width: 100%;
+  padding: 20px;
+  top: 0;
+}
+
+.page-title {
+  margin-left: 20%;
+  padding: 10px 0;
+  font-size: 2.5rem;
+  white-space: nowrap;
+  color: #f9f9f9;
+  text-align: center;
+}
+
+.devise-links {
+  gap: 5px;
+  text-align: center;
+}
+
+a.group-field, .group-field {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+  background-color: #fff;
+  width: 90%;
+  height: 20vh;
+  gap: 0.1rem;
+  text-decoration: none;
+  color: var(--text-color);
+  border-radius: 5px;
+}
+
+.transac-field {
+  margin-top: 1.5rem;
+}
+
+.first-item {
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2rem;
+  align-items: center;
+}
+
+span {
+  text-decoration: none;
+}
+
+.img-placeholder {
+  width: fit-content;
+  margin-top: 0;
+}
+
+img {
+  width: 50px;
+  border-radius: 50%;
+}
+.last-column {
+  width: 25%;
+  text-align: start;
+  margin-left: 1rem;
+}
+
+.date-stamp {
+  font-size: 0.8rem;
+}
+
+.btton {
+  width: 100%;
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  display: block;
+  text-align: center;
+  font-size: 1rem;
+  font-family: proxima-nova, sans-serif;
+  background-color: var(--sec-color);
+  color: #f9f9f9;
+  text-decoration: none;
+}
+
+.add-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 2rem;
+  height: 80%;
+}
+
+.amount-card {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 0 5px #a0a0a0;
+  background-color: #fff;
+}
+
+form input[type="checkbox"] {
+  width: auto;
+}
+
+form select {
+  width: 100%;
+  padding: 15px;
+  outline: none;
+  border: none;
+}
+
