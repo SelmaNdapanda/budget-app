@@ -1,0 +1,27 @@
+<header>
+  <%= link_to groups_path, class: 'home-btn' do %>
+    <ion-icon name="home" class="settings-btn"></ion-icon>
+  <% end %>
+  <h1 class="page-title">Categories</h1>
+  <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class: "sign-out" %>
+</header>
+
+
+<% @groups.each do |group| %>
+  <section class="fields">
+    <a class="group-field" href="<%= group_transacs_path(group) %>">
+      <div class="first-item">
+        <div class="img-placeholder">
+          <img src="<%= group.icon %>">
+        </div>
+        <span><%= group.name %></span>
+        <span class="secondary-text">$ <%= group.total_amount %></span>
+      </div>
+      <div class="last-column ">
+        <span class="date-stamp"><%= group.date %></span>
+      </div>
+    </a>
+  </section>
+    <% end %>
+  
+  <%= link_to "ADD CATEGORY", new_group_path, class: "btton" %>

@@ -1,0 +1,26 @@
+<header>
+  <%= link_to groups_path, class: 'back-btn' do %>
+    <ion-icon name="arrow-back" class="settings-btn"></ion-icon>
+  <% end %>
+  <h1 class="page-title">Transactions</h1>
+  <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class: "sign-out" %>
+</header>
+
+<section class="fields">
+  <div class="amount-card">
+    <span class="primary-text">Total amount</span> 
+    <span class="secondary-text">$ <%= @group.total_amount %></span>
+  </div>
+
+  <% @group_transacs.each do |transac| %>
+    <div class="group-field">
+      <span class="primary-text transac-field"><%= transac.name %></span>
+      <span class="date-stamp"><%= transac.date %></span>
+      <div class="column last-column">
+        <span class="secondary-text">$ <%= transac.amount %></span>
+      </div>
+    </div>
+  <% end %>
+</section>
+
+<%= link_to "ADD TRANSACTION", new_transac_path, class: "btton" %>
