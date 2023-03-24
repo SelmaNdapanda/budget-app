@@ -1,5 +1,5 @@
 class GroupsController < ApplicationController
-  load_and_authorize_resource
+  before_action :authenticate_user!
 
   def index
     @groups = current_user.groups
