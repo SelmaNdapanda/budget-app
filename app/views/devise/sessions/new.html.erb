@@ -1,11 +1,9 @@
 <header>
-  <nav>
-    <%= link_to root_path, class: 'back-btn' do %>
-      <ion-icon name="arrow-back" class="settings-btn"></ion-icon>
-    <% end %>
-  </nav>
+  <%= link_to unauthenticated_root_path, class: 'back-btn' do %>
+    <ion-icon name="arrow-back" class="settings-btn"></ion-icon>
+  <% end %>
   <h1 class="page-title">Sign in</h1>
-  <%= button_to "Log in", new_user_session_path, method: :get, class: "sign-in primary-text" %>
+  <%= button_to "Log in", groups_path, class: "sign-in primary-text" %>
 </header>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
