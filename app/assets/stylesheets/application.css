@@ -87,6 +87,7 @@ body {
 
 .blue-btton {
   background-color: var(--main-color) !important;
+  margin-bottom: 60px;
 }
 
 .grey-btton {
