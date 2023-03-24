@@ -9,7 +9,7 @@
   margin: 0;
   padding: 0;
 }
-  
+
 body {
   min-height: 100vh;
   padding-bottom: 70px;
@@ -28,7 +28,7 @@ body {
   font-size: 1.2rem;
   font-weight: 600;
 }
-  
+
 .alert,
 .notice {
   position: absolute;
@@ -48,19 +48,19 @@ body {
   -ms-transition: opacity 0.2s ease-in-out;
   animation: alert 1.5s;
 }
-  
+
 .alert {
   opacity: 0;
   -webkit-transition: opacity 0.2s ease-in-out;
   -moz-transition: opacity 0.2s ease-in-out;
   -ms-transition: opacity 0.2s ease-in-out;
 }
-  
+
 @keyframes alert {
   from {
     opacity: 0;
   }
-  
+
   to {
     opacity: 1;
   }
@@ -85,23 +85,13 @@ body {
   font-style: italic;
 }
 
-#splash-screen nav {
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-}
-
-#splash-screen nav .btton {
-  position: initial;
-}
-
 .blue-btton {
   background-color: var(--main-color) !important;
 }
 
 .grey-btton {
   background-color: inherit !important;
-  color: var(--text-color) !important; 
+  color: var(--text-color) !important;
 }
 
 .grey-btton a {
@@ -122,7 +112,8 @@ body {
   border-radius: 10px;
 }
 
-.home-btn, .back-btn {
+.home-btn,
+.back-btn {
   position: absolute;
   right: 43%;
   left: 1.5rem;
@@ -165,7 +156,7 @@ input {
   display: flex;
   gap: 1rem;
 }
-  
+
 /* stylelint-disable */
 .field > ion-icon {
   font-size: 1.5rem;
@@ -187,7 +178,7 @@ ion-icon:hover {
 
 header {
   display: flex;
-  align-items: center; 
+  align-items: center;
   justify-content: space-around;
   background-color: var(--main-color);
   width: 100%;
@@ -209,7 +200,8 @@ header {
   text-align: center;
 }
 
-a.group-field, .group-field {
+a.group-field,
+.group-field {
   display: flex;
   flex-direction: column;
   padding: 0 2rem;
@@ -249,6 +241,7 @@ img {
   width: 50px;
   border-radius: 50%;
 }
+
 .last-column {
   width: 25%;
   text-align: start;
@@ -303,4 +296,3 @@ form select {
   outline: none;
   border: none;
 }
-

@@ -3,7 +3,7 @@ class Transac < ApplicationRecord
   belongs_to :group
 
   validates :name, :author, :group, :amount, presence: true
-  
+
   def date
     date = ''
     date += "#{created_at.day} "

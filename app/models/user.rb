@@ -7,7 +7,7 @@ class User < ApplicationRecord
   has_many :groups
   has_many :transacs, foreign_key: :author_id
 
-  validates :name, presence: true, length: { in: 1..50 } 
+  validates :name, presence: true, length: { in: 1..50 }
   validates :email, presence: true, length: { in: 1..50 }, uniqueness: true
-  validates :password, presence: true, length: { in: 6..50 } 
+  validates :password, presence: true, length: { in: 6..50 }
 end

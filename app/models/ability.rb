@@ -7,6 +7,5 @@ class Ability
 
     can :manage, Group, user_id: user.id
     can :manage, Transac, author_id: user.id
-    
   end
 end
