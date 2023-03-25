@@ -10,7 +10,7 @@ class TransacsController < ApplicationController
   def new
     @new_transac = Transac.new
     @user_groups = Group.where(user: current_user)
-  
+
     # @user_groups = Group.find(params[:group_id])
   end
 
@@ -23,7 +23,7 @@ class TransacsController < ApplicationController
 
     if @new_transac.save
       flash[:success] = 'Transaction created successfully.'
-      redirect_to  group_transacs_path
+      redirect_to group_transacs_path
     else
       flash[:error] = 'Transaction could not be created.'
       render 'new'
@@ -45,8 +45,6 @@ class TransacsController < ApplicationController
   #     render :new, alert: "Couldn't add food to transaction"
   #   end
   # end
-
-
 
   private
 
