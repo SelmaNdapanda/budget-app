@@ -1,0 +1,25 @@
+<header>
+  <%= link_to groups_path, class: 'back-btn' do %>
+    <ion-icon name="arrow-back" class="settings-btn"></ion-icon>
+  <% end %>
+  <h1 class="page-title">New Transaction</h1>
+  <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class: "sign-out" %>
+</header>
+
+<%= form_with model: @new_transac, method: :post do |f| %>
+<section class="fields">
+  <div class="field">
+    <%= f.text_field :name, placeholder: "Name" %>
+  </div>
+  <div class="field">
+    <%= f.number_field :amount, placeholder: "Amount in $" %>
+  </div>
+  <div class="field">
+    <%= f.collection_select :group_id, @user_groups, :id, :name %>
+  </div>
+  <%= f.hidden_field :author_id, value: current_user.id %>
+
+  
+  <%= f.submit "ADD", class: "btton" %>
+</section>
+<% end %>

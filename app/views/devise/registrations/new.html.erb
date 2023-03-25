@@ -1,0 +1,42 @@
+<header>
+  <%= link_to unauthenticated_root_path, class: 'back-btn' do %>
+    <ion-icon name="arrow-back" class="settings-btn"></ion-icon>
+  <% end %>
+  <h1 class="page-title">Sign Up</h1>
+  <%= button_to "Sign Up", new_user_session_path, class: "sign-in primary-text" %>
+</header>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+  <section class="fields">
+  <div class="field">
+    <ion-icon name="person-outline"></ion-icon>
+    <%= f.text_field :name, placeholder: "Name", autofocus: true, autocomplete: "name" %>
+  </div>
+
+  <div class="field">
+    <ion-icon name="mail-outline"></ion-icon>
+    <%= f.email_field :email, placeholder: "Email", autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <ion-icon name="key-outline"></ion-icon>
+    <%= f.password_field :password, placeholder: "Password", autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <ion-icon name="lock-closed-outline"></ion-icon>
+    <%= f.password_field :password_confirmation, placeholder: "Retype Password", autocomplete: "new-password" %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+  </div>
+  <div class="devise-links">
+    <%= render "devise/shared/links" %>
+  <div>
+  </section>
+
+  <div class="actions">
+    <%= f.submit "Sign up", class: "btton"  %>
+  </div>
+<% end %>
