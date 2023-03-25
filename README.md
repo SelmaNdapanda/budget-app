@@ -56,8 +56,8 @@
 
 ## Live Demo 
 
-- [Live Demo Link]()
-- [Video Link]()
+- [Live Demo Link](https://my-budget-c4p6.onrender.com/)
+- [Video Link](https://drive.google.com/file/d/1xZH-2oj15QFBmYgWWWYOuidAq6l38U-v/view)
 
 ## Getting Started 
 
