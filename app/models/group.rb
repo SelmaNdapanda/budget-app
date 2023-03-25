@@ -1,6 +1,7 @@
 class Group < ApplicationRecord
   belongs_to :user
-  has_many :transacs
+  has_many :group_transacs
+  has_many :transacs, through: :group_transacs
 
   validates :name, presence: true, uniqueness: true
   validates :icon, presence: true

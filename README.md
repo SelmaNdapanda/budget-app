@@ -17,7 +17,7 @@
 - [📝 License](#license)
 
 
-# Budget App
+# 📖 Budget App <a name="about-project"></a>
 
 
 **Budget App** is a web mobile friendly app build using Ruby on Rails framework. This App supports user registration and authentication using the Devise gem. In this App, a user can create his own account on the app and after logging in she/he will be able to add categories and then add transactions under those categories. The app provide some metrics like the total value of transactions under each category.
@@ -48,18 +48,18 @@
   </ul>
 </details>
 
-### Key Features
+### Key Features <a name="key-features"></a>
 
 - **Register an account**
 - **Create categories and transactions**
 - **Metrics about user transactions**
 
-## Live Demo 
+## 🚀 Live Demo <a name="live-demo"></a>
 
 - [Live Demo Link](https://my-budget-c4p6.onrender.com/)
 - [Video Link](https://drive.google.com/file/d/1xZH-2oj15QFBmYgWWWYOuidAq6l38U-v/view)
 
-## Getting Started 
+## 💻 Getting Started <a name="getting-started"></a>
 
 > To get a local copy up and running follow these simple steps.
 
@@ -109,7 +109,7 @@ In the project directory, you can run:
   ```
   Launches the test runner.
 
-## Author
+## 👥 Author <a name="authors"></a>
 
 👤 **Selma Hamutenya**
 
@@ -117,27 +117,27 @@ In the project directory, you can run:
 - Twitter: [@SellohBlaq](https://twitter.com/sellohBlaq)
 - LinkedIn: [selma-hamutenya](www.linkedin.com/in/selma-hamutenya)
 
-## Future Feature
+## 🔭 Future Features <a name="future-features"></a>
 
 - **Create a user profile**
 - **Create a desktop version**
 
-## Contributing 
+## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](../../issues/).
 
-## Show your support <a name="support"></a>
+## ⭐️ Show your support <a name="support"></a>
 
 If you like this project give it a star!
 
-## Acknowledgments 
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 - Microverse ❤️ 
 
 - Credit goes to [Gregoire Vella on Behance](https://www.behance.net/gregoirevella) whose original design was used.
 
-## License 
+## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.

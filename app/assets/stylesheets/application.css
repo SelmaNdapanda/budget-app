@@ -107,9 +107,9 @@ body {
   padding: 0.5rem;
   height: 2rem;
   font-size: 1rem;
-  color: rgb(241, 55, 55);
+  color: var(--sec-color);
   font-weight: 400;
-  border-color: rgb(241, 55, 55);
+  border-color: var(--sec-color);
   border-radius: 10px;
 }
 

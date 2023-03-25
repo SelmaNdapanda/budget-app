@@ -1,6 +1,7 @@
 class Transac < ApplicationRecord
   belongs_to :author, class_name: 'User'
-  belongs_to :group
+  has_many :group_transacs
+  has_many :groups, through: :group_transacs
 
   validates :name, :author, :group, :amount, presence: true
 
