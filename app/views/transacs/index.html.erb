@@ -14,10 +14,10 @@
 
   <% @group_transacs.each do |transac| %>
     <div class="group-field">
-      <span class="primary-text transac-field"><%= transac.name %></span>
-      <span class="date-stamp"><%= transac.date %></span>
+      <span class="primary-text transac-field"><%= transac.transac.name %></span>
+      <span class="date-stamp"><%= transac.transac.date %></span>
       <div class="column last-column">
-        <span class="secondary-text">$ <%= transac.amount %></span>
+        <span class="secondary-text">$ <%= transac.transac.amount %></span>
       </div>
     </div>
   <% end %>

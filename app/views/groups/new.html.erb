@@ -6,7 +6,7 @@
   <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class: "sign-out" %>
 </header>
 
-<%= form_with model: @new_group do |f| %>
+<%= form_with model: @new_group, data: { turbo: false } do |f| %>
 <section class="fields">
   <div class="field">
     <%= f.text_field :name, placeholder: "Name" %>
