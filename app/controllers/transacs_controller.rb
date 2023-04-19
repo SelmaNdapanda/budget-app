@@ -12,7 +12,8 @@ class TransacsController < ApplicationController
   end
 
   def create
-    @new_transac = Transac.create(name: transac_params[:name], amount: transac_params[:amount], author_id: transac_params[:author_id])
+    @new_transac = Transac.create(name: transac_params[:name], amount: transac_params[:amount],
+                                  author_id: transac_params[:author_id])
     @group_transac = GroupTransac.create(group_id: transac_params[:group_id], transac_id: @new_transac.id)
 
     if @group_transac.save
