@@ -3,7 +3,7 @@ class Transac < ApplicationRecord
   has_many :group_transacs
   has_many :groups, through: :group_transacs
 
-  validates :name, :author, :group, :amount, presence: true
+  validates :name, :author, :amount, presence: true
 
   def date
     date = ''
